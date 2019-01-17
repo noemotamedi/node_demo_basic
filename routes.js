@@ -25,9 +25,11 @@ module.exports = function(app) {
 
     //grab value from the submitted request object
     var catName = req.body.catName
+    var catBreed = req.body.catBreed
+    var catAge = req.body.catAge
 
     //create and save our cat, just like creating an object
-    var newCat = new Cat({ name: catName });
+    var newCat = new Cat({ name: catName, breed: catBreed, age: catAge });
     newCat.save(function (err) {
 
       console.log("saved: " + newCat.name)

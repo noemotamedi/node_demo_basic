@@ -12,10 +12,16 @@
 Your cats:
 
 <table>
-
-<% for(var i = 0; i<cats.length;i++) { %>
+<tr>
+  <td>Name</td>
+  <td>Breed</td>
+  <td>Age</td>
+</tr>
+<% for(var i = 0; i< cats.length;i++) { %>
   <tr>
-    <td><%= cats[i].name %></td>
+    <td class="cat"><%= cats[i].name %></td>
+    <td class="cat"><%= cats[i].breed %></td>
+    <td class="cat"><%= cats[i].age %></td>
   </tr>
 <% } %>
 
